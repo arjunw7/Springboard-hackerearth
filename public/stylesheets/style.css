@@ -1,0 +1,348 @@
+body{
+	background-color:#e8e8e8;
+	width:100%;
+	overflow-x: hidden; 
+}
+
+/*------scroolbar style Begin------*/
+::-webkit-scrollbar {
+    width: 6px;
+}
+ 
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    border-radius: 10px;
+    background-color: white;
+}
+ 
+::-webkit-scrollbar-thumb {
+    background-color:#1e75ba;
+}
+/*------scroolbar style End------*/
+
+
+/* Preloader style Begin*/
+#preloader  {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #fefefe;
+    z-index: 2000;
+    height: 100%;
+ }
+#status  {
+	text-align:center;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin: -50px 0 0 -50px;
+ }
+#status img{
+	width:50%;
+}
+/* Preloader style End*/
+
+.main{
+	background: linear-gradient(to right, #096caa , #20999c);
+	padding:10px 0px 50px
+}
+.header{
+	width: 100%;
+	margin-top:20px;
+}
+.logo{
+	width:400px;
+	display: inline-block;
+	padding-left:20px;
+}
+.logo img{
+	width:100%
+}
+.menu{
+	position:relative;
+	display:inline-block;
+	float:right;
+	padding:20px 0px;
+	margin-right:20px;
+
+}
+.listToggle img{
+	width:80%;
+	margin-left:10%;
+}
+.listToggle{
+	width:50px;
+	background-color:#f3f3f3;
+	display:none;
+	float:right;
+	margin:10px
+}
+
+li{
+	display:inline-block;
+}
+.menuItem{
+	padding: 0px 15px;
+	font-family:arial;
+}
+.menuItem a, .menuItem a:hover{
+	color:#fff;
+	font-size:20px;
+	text-decoration:none;
+}
+.menu button{
+	padding: 2px 20px;
+	height:60px;
+	color:white;
+	border:none;
+	transition:.5s;
+	border-radius:30px;
+	outline:none;
+}
+
+#signup{
+	background-color:transparent;
+	margin-left:15px;
+	border:3px solid #fff;
+	font-size:18px;
+}
+#signup:hover{
+	background-color:white;
+	color:#1a91a2;
+}
+ul{
+	padding:10px 5px; 
+}
+.dropdown{
+	position:absolute;
+	background-color:white;
+	z-index:1000;
+	width:150px;
+	box-shadow:0px 5px 10px grey;
+	margin-top:21px;
+	display: none;
+}
+.dropdown li{
+	width:100%;
+	padding:10px;
+}	
+/*------menu bar style end------*/
+
+.mainHead{
+	color:white;
+	font-size:3.5em;
+	text-align:center;
+	padding-top:1em;
+	font-weight:bold;
+}
+.mainSubHead{
+	color:white;
+	font-size:2.5em;
+	text-align:center;
+	padding-top:.2em
+}
+.subscribeNow{
+	text-align:center;
+}
+.subscribeNow button{
+	background-color:transparent;
+	color:white;
+	font-size:2.2em;
+	border-radius:50px;
+	padding:10px 50px;
+	border: 3px solid white;
+	margin-top:1em;
+	transition:.5s;
+	outline:none;
+
+}
+.subscribeNow button:hover{
+	background-color:#fff;
+	color:#0e7da7;
+}
+.howWeWork{
+	margin-top:3em;
+	margin-left:8%;
+}
+.howWeWork img{
+	width:100%;
+}
+.line{
+	height:15px;
+	background-color:#00acbd;
+	margin-top:70px;
+	border-radius:15px
+}
+.iconHead{
+	color:white;
+	font-size:1.5em;
+	text-align:center;
+}
+.iconDetail{
+	color:white;
+	text-align:center;
+	font-size:1.1em;
+}
+.technologyStack{
+	padding:2em;
+	text-align:center;
+	background-color:white;
+}
+.techHead{
+	color:#a3a3a3;
+	font-size:1.5em;
+}
+.technologyStack img{
+	width:75%;
+	padding:20px
+}
+.courses{
+	padding:25px;
+}
+.searchBar{
+	margin:0px 25px 
+}
+.searchBar input{
+	width:100%;
+	padding:18px;
+	border-width:0;
+	font-size:22px;
+	outline:none;
+}
+.course{
+	background-color:white;
+	padding:0px;
+	margin:25px;
+	height:40em;
+	transition:.2s
+}
+.course:hover{
+	box-shadow:0px 0px 15px grey;
+}
+.courseImage{
+	text-align:center;
+	padding:30px;
+	height:17em;
+}
+.courseTitle{
+	font-size:26px;
+	padding:10px;
+	color:white;
+}
+.couseDescription{
+	font-size:16px;
+	padding:10px 10px;
+	color:white;
+	height:7em
+}
+.pattern{
+	background: linear-gradient(to right, #096caa , #20999c);
+	height:23em;
+}
+.enroll{
+	text-align:right;
+	padding:10px;
+}
+.enroll button{
+	background-color:white;
+	border:3px solid white;
+	font-size:24px;
+	border-radius:30px;
+	padding:10px 30px;
+	transition:.5s;
+}
+.allTags{
+	padding:10px;
+	color:white;
+	height:5em;
+}
+.enroll button:hover{
+	background-color:transparent;
+	border:3px solid white;
+	color:white;
+}
+.learner{
+	color:white;
+	padding:25px 10px;
+}
+.index{
+	background-color:white;
+}
+.indexHead{
+	font-size:22px;
+	padding:15px;
+	border-bottom:2px solid #e9e9e9;
+}
+.sortOptions{
+	font-size:20px;
+}
+.sortOptions input{
+	margin: 0px 10px;
+}
+.option{
+	border-bottom:2px solid #e9e9e9;
+	padding:15px;
+}
+
+
+@media(max-width:960px){
+	.menu{
+		display:none;
+	}
+	.slider{
+		padding-top:100px;
+		height:350px;
+	}
+	.listToggle{
+		display: block;
+	}
+	.menu{
+		background-color:white;
+		margin-top:12px;
+		padding:0;
+		margin-right:0px;
+		position:absolute;
+		width:100%;
+	}
+	.menu li{
+		width:100%;
+		text-align:center;
+		padding:12px;
+		border-bottom:1px solid #dfdfdf; 
+
+	}
+	.menuItem{
+		padding: 5px 15px;
+		font-family:arial;
+		font-weight:bold;
+		color:#767676;
+		font-size:15px
+	}
+	.menuItem a, .menuItem a:hover{
+		color:#767676;
+		font-size:18px;
+		text-decoration:none;
+	}
+	
+	.menu button{
+		font-family:arial;
+		font-weight:bold;
+		color:#767676;
+		font-size:15px;
+		height:15px;
+		background-color:white;
+	}
+
+	#signup{
+		background-color:white;
+		margin-left:0px;
+		border:none;
+	}
+	.ind{
+		display: none;
+	}
+}

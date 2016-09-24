@@ -1,0 +1,190 @@
+<!-- 
+Author: Arjun Wadhwa
+Author URL: www.facebook.com/cornifus
+-->
+<!DOCTYPE html>
+<html lang="en" ng-app="springBoard">
+<head>
+<meta charset="utf-8">
+<title>The Learning Hub</title>
+<meta name="author" content="Arjun Wadhwa"/>
+<meta name="description" content=""/>
+<meta name="viewport" content=" width=device-width, initial-scale=1.0"/>
+<link rel="stylesheet" type="text/css" href="stylesheets/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+<link rel="stylesheet" type="text/css" href="bower_components/raleway/raleway.css">
+<script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
+<script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+<script type="text/javascript" src="bower_components/angular/angular.js"></script>
+<script type="text/javascript" src="bower_components/angular-route/angular-route.js"></script>
+<script type="text/javascript" src="bower_components/angular-resource/angular-resource.js"></script>
+<script type="text/javascript" src="bower_components/angular-resource/angular-resource.js"></script>
+<script type="text/javascript" src="bower_components/jquery-ui/jquery-ui.js"></script>
+<script src="javascripts/default.js"></script>
+<script src="javascripts/controller.js"></script>
+<script type="text/javascript">
+
+</script>
+</head>
+<body ng-controller="mainController">
+	<div class="main">
+		<div class="header">
+			<div class="logo">
+				<img src="images/logo.png">
+			</div>
+			<div class="listToggle">
+					<img src="../images/menu.png">
+				</div>
+			<div class="menu">
+				<ul>
+					<li class="menuItem"><a href="/#package">How we work</a></li>
+					<li class="menuItem"><a href="">Courses</a></li>
+					<li ng-hide="authenticated">
+					<a href="/#signup"><button id="signup">Login with Facebook</button></a>
+					</li>
+					<li  class="menuItem" ng-show="authenticated">
+					<a style="cursor:pointer" class="dropdownMain">{{ current_user_name }}<img src="images/downArrow.png" width="20px"></a>
+						<ul class="dropdown">
+							<li><a href="/#profile" style="cursor:pointer">My profile</a></li>
+							<li><a ng-click="signout()" style="cursor:pointer">Signout</a></li>
+						</ul>
+					</li>
+					<li  class="menuItem" ng-show="authenticated">
+					
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="mainHead">
+			Learn from the best at your pace and convenience
+		</div>
+		<div class="mainSubHead">
+			Instant connect with a qualified expert and get handson help 24/7
+		</div>
+		<div class="subscribeNow">
+			<button>Join for free</button>
+		</div>
+		<div class="howWeWork">
+			<div class="row">
+				<div class="col-md-1 col-xs-2 col-md-offset-2 col-xs-offset-1">
+					<img src="../images/icons/1.png">
+					<div class="iconHead">
+						Coursework
+					</div>
+					<div class="iconDetail">
+						interactive courses featuring pre-recorded videos
+					</div>
+				</div>
+				<div class="col-md-2 col-xs-1">
+					<div class="line"></div>
+				</div>
+				<div class="col-md-1 col-xs-2">
+					<img src="../images/icons/2.png">
+					<div class="iconHead">
+						Support
+					</div>
+					<div class="iconDetail">
+						Connect with other learners and debate ideas
+					</div>
+				</div>
+				<div class="col-md-2 col-xs-1">
+					<div class="line"></div>
+				</div>
+				<div class="col-md-1 col-xs-2">
+					<img src="../images/icons/3.png">
+					<div class="iconHead">
+						Certificates
+					</div>
+					<div class="iconDetail">
+						Earn offical recognition of your work
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="technologyStack">
+		<div class="techHead">
+			Learn most trending technology stacks from Learning Hub's intiutive courses
+		</div>
+		<div class="row">
+			<div class="col-md-8 col-xs-10 col-md-offset-2 col-xs-offset-1">
+			<div class="row">
+				<div class="col-md-2 col-xs-4">
+					<img src="../images/icons/tech1.png">
+				</div>
+				<div class="col-md-2 col-xs-4">
+					<img src="../images/icons/tech2.png">
+				</div>
+				<div class="col-md-2 col-xs-4">
+					<img src="../images/icons/tech3.png">
+				</div>
+				<div class="col-md-2 col-xs-4">
+					<img src="../images/icons/tech4.png">
+				</div>
+				<div class="col-md-2 col-xs-4">
+					<img src="../images/icons/tech5.png">
+				</div>
+				<div class="col-md-2 col-xs-4">
+					<img src="../images/icons/tech6.png">
+				</div>
+			</div>
+			</div>
+		</div>
+	</div>
+	<div class="courses">
+		<div class="row">
+			<div class="col-md-3 ind">
+				<div class="index">
+					<div class="indexHead">Sort By</div>
+					<div class="sortOptions">
+						<div class="option">
+							<input type="radio" name="sort" value="Bike">Upvotes
+						</div>
+						<div class="option">
+							<input type="radio" name="sort" value="Bike">Downvotes
+						</div>
+						<div class="option">
+							<input type="radio" name="sort" value="Bike">Learners
+						</div>
+						<div class="option">
+							<input type="radio" name="sort" value="Bike">Duration
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-9 col-xs-12">
+				<div class="searchBar">
+					<input placeholder="search(by tag)" ng-model="tagSearch">
+				</div>
+				<div class="row">
+					<div ng-repeat="path in details.paths | filter: tagSearch">
+					<div class="col-md-4">
+						<div class="course">
+							<div class="courseImage">
+								<img src="{{ path.image }}">
+							</div>
+							<div class="pattern">
+								<div class="courseTitle">{{ path.name }}</div>
+								<div class="couseDescription">
+									{{ path.description }}
+								</div>
+								<div class="allTags"><i>tags: {{ path.tags }}</i></div>
+								<div class="row">
+									<div class="col-md-5 col-xs-5 learner">{{ path.learner }} Learners<br>
+										{{ path.hours }} hours</div>
+									<div class="col-md-7 col-xs-7 enroll">
+										<a href="{{ path.sign_up }}" target="blank"><button>Enroll Now</button></a></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="footer">
+
+	</div>
+</body>
+</html>
