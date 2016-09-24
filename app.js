@@ -1,5 +1,10 @@
 var express = require('express');
 var bodyParser = require("body-parser");
+var path = require('path');
+var favicon = require('serve-favicon');
+var logger = require('morgan');
+var cookieParser = require('cookie-parser');
+var bodyParser = require('body-parser');
 var mongojs = require("mongojs");
 var db = mongojs('arjunw7:13bcb0062@ds019048.mlab.com:19048/heroku_s6qv8mb8', ['petetions']);
 
@@ -7,11 +12,11 @@ var db = mongojs('arjunw7:13bcb0062@ds019048.mlab.com:19048/heroku_s6qv8mb8', ['
 var app = express();
 
 app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'ejs');
 app.use('/bower_components',  express.static(path.join(__dirname, '/bower_components')));
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
-app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 
