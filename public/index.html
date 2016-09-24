@@ -16,8 +16,6 @@ Author URL: www.facebook.com/cornifus
 <script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
 <script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
 <script type="text/javascript" src="bower_components/angular/angular.js"></script>
-<script type="text/javascript" src="bower_components/angular-route/angular-route.js"></script>
-<script type="text/javascript" src="bower_components/angular-resource/angular-resource.js"></script>
 <script type="text/javascript" src="bower_components/angular-resource/angular-resource.js"></script>
 <script type="text/javascript" src="bower_components/jquery-ui/jquery-ui.js"></script>
 <script src="javascripts/controller.js"></script>
@@ -39,17 +37,7 @@ Author URL: www.facebook.com/cornifus
 					<li class="menuItem"><a href="/#package">How we work</a></li>
 					<li class="menuItem"><a href="">Courses</a></li>
 					<li ng-hide="authenticated">
-					<a href="/#signup"><button id="signup">Login with Facebook</button></a>
-					</li>
-					<li  class="menuItem" ng-show="authenticated">
-					<a style="cursor:pointer" class="dropdownMain">{{ current_user_name }}<img src="images/downArrow.png" width="20px"></a>
-						<ul class="dropdown">
-							<li><a href="/#profile" style="cursor:pointer">My profile</a></li>
-							<li><a ng-click="signout()" style="cursor:pointer">Signout</a></li>
-						</ul>
-					</li>
-					<li  class="menuItem" ng-show="authenticated">
-					
+					<a href="/#signup"><button id="signup">Share on facebook</button></a>
 					</li>
 				</ul>
 			</div>
@@ -169,9 +157,9 @@ Author URL: www.facebook.com/cornifus
 								</div>
 								<div class="allTags"><i>tags: {{ path.tags }}</i></div>
 								<div class="row">
-									<div class="col-md-4 col-xs-4 learner">{{ path.learner }} Learners<br>
+									<div class="col-md-5 col-xs-5 learner">{{ path.learner }} Learners<br>
 										{{ path.hours }} hours</div>
-									<div class="col-md-8 col-xs-8 enroll">
+									<div class="col-md-7 col-xs-7 enroll">
 										<a href="{{ path.sign_up }}" target="blank"><button>Enroll Now</button></a></div>
 								</div>
 							</div>
@@ -188,7 +176,7 @@ Author URL: www.facebook.com/cornifus
 				No part of this application is copied and is solely developed for educational purpose.
 			</div>
 			<div class="col-md-6 right">
-				Developed by: <a href="http://www.arjun-wadhwa.me">Arjun Wadhwa</a>
+				Developed by: <a href="http://www.arjun-wadhwa.me" target="blank">Arjun Wadhwa</a>
 			</div>
 		</div>
 	</div>
