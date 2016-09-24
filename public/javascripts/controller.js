@@ -12,8 +12,7 @@ app.controller('mainController', ['$scope','$http',
       angular.element(".listToggle").click(function(){
         angular.element(".menu").toggle();
       });
-    }
-
+    };
     $scope.load();
 
 }]);

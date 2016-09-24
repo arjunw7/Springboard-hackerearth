@@ -6,7 +6,7 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var mongojs = require("mongojs");
-var db = mongojs('arjunw7:13bcb0062@ds019048.mlab.com:19048/heroku_s6qv8mb8', ['petetions']);
+var db = mongojs('arjunw7:13bcb0062@ds041586.mlab.com:41586/heroku_7zk8r74f', ['paths']);
 
 
 var app = express();
