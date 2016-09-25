@@ -307,13 +307,17 @@ ul{
 	width:600px;
 	background-color:white;
 	color:grey;
-	font-size:1.5;
+	font-size:1.5em;
 	margin:-7px 0px 0px -5px;
 	padding:10px;
 	border-top:1px solid #ececec;
 	border-bottom:1px solid #ececec;
 	display: block;
 	cursor: pointer;
+}
+.ui-autocomplete li:hover{
+	background-color:#1bb2c0;
+	color:white;
 }
 .ui-helper-hidden-accessible{
 	display:none;
