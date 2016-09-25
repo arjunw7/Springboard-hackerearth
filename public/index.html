@@ -115,57 +115,68 @@ Author URL: www.facebook.com/cornifus
 			</div>
 		</div>
 	</div>
-	<div class="courses">
-		<div class="row">
-			<div class="col-md-3 ind">
-				<div class="index">
-					<div class="indexHead"><div class="indexText">Sort By</div> <div class="grid"><img src="../images/grid.png"></div></div>
-					<div class="sortOptions">
-						<div class="option">
-							<input type="checkbox" name="sort" value="upvotes" ng-model="upvotes">Upvotes
-						</div>
-						<div class="option">
-							<input type="checkbox" name="sort" value="downvotes" ng-model="downvotes">Downvotes
-						</div>
-						<div class="option">
-							<input type="checkbox" name="sort" value="laerner" ng-model="learner">Learners
-						</div>
-						<div class="option">
-							<input type="checkbox" name="sort" value="duration" ng-model="duration">Duration
-						</div>
+	<div class="container">
+		<div class="courses">
+			<div class="row">
+				<div class="col-md-3 ind">
+						<select name="Sort By" ng-model="sortType">
+						<option>Sort By</option>
+						<option>Upvotes</option>
+						<option>Downvotes</option>
+						<option>Learners</option>
+						<option>Hours</option>
+						</select>
+				</div>
+				<div class="col-md-9 col-xs-12">
+					<div class="searchBar ui-widget">
+						<input placeholder="search(by tag)" id="tags" ng-model="selected">
 					</div>
 				</div>
 			</div>
-			<div class="col-md-9 col-xs-12">
-				<div class="searchBar ui-widget">
-					<input placeholder="search(by tag)" id="tags" ng-model="selected">
-				</div>
-				<div class="row">
-					<div ng-repeat="path in details.paths | filter: selected">
-					<div class="col-md-4">
-						<div class="course">
-							<div class="courseImage">
-								<img src="{{ path.image }}">
+			<div class="row">
+				<div ng-repeat="path in details.paths | filter: selected | orderBy: sortType">
+				<div class="col-md-3">
+					<div class="course">
+						<div class="courseImage">
+							<img src="{{ path.image }}">
+						</div>
+						<div class="pattern">
+							<div class="courseTitle">{{ path.name }}</div>
+							<div class="couseDescription">
+								{{ path.description }}
 							</div>
-							<div class="pattern">
-								<div class="courseTitle">{{ path.name }}</div>
-								<div class="couseDescription">
-									{{ path.description }}
-								</div>
-								<div class="allTags"><i>tags: {{ path.tags }}</i></div>
-								<div class="row">
-									<div class="col-md-5 col-xs-5 learner">{{ path.learner }} Learners<br>
-										{{ path.hours }} hours</div>
-									<div class="col-md-7 col-xs-7 enroll">
-										<a href="{{ path.sign_up }}" target="blank"><button>Enroll Now</button></a></div>
-								</div>
+							<div class="allTags"><i>tags: {{ path.tags }}</i></div>
+							<div class="row">
+								<div class="col-md-5 col-xs-5 learner">{{ path.learner }} Learners<br>
+									{{ path.hours }} hours</div>
+								<div class="col-md-7 col-xs-7 enroll">
+									<a href="{{ path.sign_up }}" target="blank"><button>Enroll Now</button></a></div>
 							</div>
 						</div>
 					</div>
 				</div>
 				</div>
+			</div>
+				
 			</div>
 		</div>
+	</div>
+	
+	<div class="newCourses">
+		<div class="row">
+			<div class="col-md-6">
+				<div class="addText">Get notified about new courses, events, community news & more</div>
+			</div>
+			<div class="col-md-6">
+			<div class="addForm">
+				<form>
+					<input type="email" name="email" placeholder="Enter your Email address">
+					<button>Register</button>
+				</form>
+			</div>
+		</div>
+		</div>
+
 	</div>
 	<div class="footer">
 		<div class="row">
