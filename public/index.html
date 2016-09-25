@@ -19,9 +19,6 @@ Author URL: www.facebook.com/cornifus
 <script type="text/javascript" src="bower_components/angular-resource/angular-resource.js"></script>
 <script type="text/javascript" src="bower_components/jquery-ui/jquery-ui.js"></script>
 <script src="javascripts/controller.js"></script>
-<script type="text/javascript">
-
-</script>
 </head>
 <body ng-controller="mainController">
 	<div class="main">
@@ -46,10 +43,10 @@ Author URL: www.facebook.com/cornifus
 			Learn from the best at your pace and convenience
 		</div>
 		<div class="mainSubHead">
-			Instant connect with a qualified expert and get handson help 24/7
+			Instant connect with our qualified experts and hands-on help 24/7
 		</div>
 		<div class="subscribeNow">
-			<button>Join for free</button>
+			<a href="http://www.springboard.com" target="blank"><button>Join for free</button></a>
 		</div>
 		<div class="howWeWork">
 			<div class="row">
@@ -125,26 +122,26 @@ Author URL: www.facebook.com/cornifus
 					<div class="indexHead">Sort By</div>
 					<div class="sortOptions">
 						<div class="option">
-							<input type="radio" name="sort" value="Bike">Upvotes
+							<input type="radio" name="sort" value="upvotes" ng-model="sort">Upvotes
 						</div>
 						<div class="option">
-							<input type="radio" name="sort" value="Bike">Downvotes
+							<input type="radio" name="sort" value="downvotes" ng-model="sort">Downvotes
 						</div>
 						<div class="option">
-							<input type="radio" name="sort" value="Bike">Learners
+							<input type="radio" name="sort" value="laerner" ng-model="sort">Learners
 						</div>
 						<div class="option">
-							<input type="radio" name="sort" value="Bike">Duration
+							<input type="radio" name="sort" value="duration" ng-model="sort">Duration
 						</div>
 					</div>
 				</div>
 			</div>
 			<div class="col-md-9 col-xs-12">
-				<div class="searchBar">
-					<input placeholder="search(by tag)" ng-model="tagSearch">
+				<div class="searchBar ui-widget">
+					<input placeholder="search(by tag)" id="tags" ng-model="selected">
 				</div>
 				<div class="row">
-					<div ng-repeat="path in details.paths | filter: tagSearch">
+					<div ng-repeat="path in details.paths | filter: selected">
 					<div class="col-md-4">
 						<div class="course">
 							<div class="courseImage">

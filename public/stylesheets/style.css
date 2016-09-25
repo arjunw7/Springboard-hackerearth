@@ -217,7 +217,6 @@ ul{
 	background-color:white;
 	padding:0px;
 	margin:25px;
-	height:40em;
 	transition:.2s
 }
 .course:hover{
@@ -226,15 +225,18 @@ ul{
 .courseImage{
 	text-align:center;
 	padding:30px;
-	height:17em;
+	height:15em
+}
+.courseImage img{
+	width:75%;
 }
 .courseTitle{
-	font-size:26px;
+	font-size:1.5em;
 	padding:10px;
 	color:white;
 }
 .couseDescription{
-	font-size:16px;
+	font-size:1em;
 	padding:10px 10px;
 	color:white;
 	height:7em
@@ -250,12 +252,13 @@ ul{
 .enroll button{
 	background-color:white;
 	border:3px solid white;
-	font-size:20px;
+	font-size:1em;
 	border-radius:30px;
 	padding:10px 25px;
 	transition:.5s;
 }
 .allTags{
+	font-size:1em;
 	padding:10px;
 	color:white;
 	height:5em;
@@ -267,7 +270,8 @@ ul{
 }
 .learner{
 	color:white;
-	padding:25px 10px;
+	padding:16px 10px;
+	font-size:1em;
 }
 .index{
 	background-color:white;
@@ -288,7 +292,6 @@ ul{
 	padding:15px;
 }
 .footer{
-	height:50px;
 	background: linear-gradient(to right, #096caa , #20999c);
 	color:white;
 	padding:15px;
@@ -299,6 +302,19 @@ ul{
 .right a{
 	color:white;
 	text-decoration:underline;
+}
+.ui-autocomplete li{
+	width:600px;
+	background-color:white;
+	color:grey;
+	font-size:1.5;
+	margin:-7px 0px 0px -5px;
+	padding:10px;
+	border-top:1px solid #ececec;
+	border-bottom:1px solid #ececec;
+	display: block;
+	cursor: pointer;
+
 }
 
 @media(max-width:960px){
@@ -358,15 +374,14 @@ ul{
 		display: none;
 	}
 	.footer{
-		height:50px;
 		background: linear-gradient(to right, #096caa , #20999c);
 		color:white;
 		padding:15px;
 	}
-	.right{
+	.left{
 		text-align:center;
 	}
-	.right a{
+	.right{
 		text-align:center;
 		color:white;
 		text-decoration:underline;
