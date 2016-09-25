@@ -7,19 +7,12 @@ var morgan = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
-var mongoose = require('mongoose');
-mongoose.connect('mongodb://arjunw7:13bcb0062@ds041586.mlab.com:41586/heroku_7zk8r74f');
-require('./models/models');
-
-
-var api = require('./routes/api');
 var app = express();
 
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 app.use('/bower_components',  express.static(path.join(__dirname, '/bower_components')));
 
-app.use('/api', api);
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
