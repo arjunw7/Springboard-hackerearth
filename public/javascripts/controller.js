@@ -57,11 +57,6 @@ app.controller('mainController', ['$scope','$http',
         console.log(data);
       });
     };
-
-    var wid = angular.element(".searchBar input").width();
-    console.log(wid);
-    angular.element(".ui-autocomplete li").css({"width":wid});
-
     $scope.load();
 
 }]);
