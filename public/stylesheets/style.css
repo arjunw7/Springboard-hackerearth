@@ -225,10 +225,10 @@ ul{
 .courseImage{
 	text-align:center;
 	padding:30px;
-	height:15em
+	height:16em
 }
 .courseImage img{
-	width:75%;
+	width:65%;
 }
 .courseTitle{
 	font-size:1.5em;
@@ -314,7 +314,9 @@ ul{
 	border-bottom:1px solid #ececec;
 	display: block;
 	cursor: pointer;
-
+}
+.ui-helper-hidden-accessible{
+	display:none;
 }
 
 @media(max-width:960px){
