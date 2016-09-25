@@ -8,7 +8,7 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/votes');
+mongoose.connect('mongodb://arjunw7:13bcb0062@ds041586.mlab.com:41586/heroku_7zk8r74f');
 require('./models/models');
 
 
