@@ -337,7 +337,7 @@ li{
 }
 .addForm input{
 	padding:15px;
-	width:60%;
+	width:70%;
 	border:none;
 	outline:none;
 	font-size:22px;
@@ -434,5 +434,12 @@ li{
 	}
 	.line{
 		display:none;
+	}
+	.addForm input{
+		width:100%;
+	}
+	.addForm button{
+		margin-left:25%;
+		margin-top:20px;
 	}
 }
