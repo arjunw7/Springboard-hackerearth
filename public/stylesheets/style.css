@@ -218,7 +218,7 @@ li{
 	height:16em
 }
 .courseImage img{
-	width:65%;
+	width:220px;
 }
 .courseTitle{
 	font-size:1.5em;
@@ -229,7 +229,7 @@ li{
 	font-size:1em;
 	padding:10px 10px;
 	color:white;
-	height:7em
+	height:9em
 }
 .pattern{
 	background: linear-gradient(to right, rgba(9,108,170,.8) , rgba(32,153,156,.8));
@@ -251,7 +251,7 @@ li{
 	font-size:1em;
 	padding:10px;
 	color:white;
-	height:5em;
+	height:4em;
 }
 .enroll button:hover{
 	background-color:transparent;
@@ -323,7 +323,7 @@ li{
 	display:none;
 }
 .newCourses{
-	background-color:#63c2cb;
+	background-color:#4cabb1;
 	padding:30px;
 	margin-bottom:30px; 
 }
@@ -426,5 +426,13 @@ li{
 		text-align:center;
 		color:white;
 		text-decoration:underline;
+	}
+}
+@media(max-width:500px){
+	.logo{
+		width:300px;
+	}
+	.line{
+		display:none;
 	}
 }

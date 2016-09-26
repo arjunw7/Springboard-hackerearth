@@ -9,7 +9,15 @@ app.controller('mainController', ['$scope','$http',
         console.log($scope.details)});
     };
     getPaths();
-
+    var votes = [
+    { "courseId":1, "upvotes":23, "downvotes":8},
+    { "courseId":2, "upvotes":32, "downvotes":2},
+    { "courseId":3, "upvotes":19, "downvotes":16},
+    { "courseId":4, "upvotes":53, "downvotes":25},
+    { "courseId":5, "upvotes":80, "downvotes":10},
+    { "courseId":6, "upvotes":11, "downvotes":13},
+    { "courseId":7, "upvotes":24, "downvotes":20}
+  ];
     $scope.load = function() {
       angular.element(".listToggle").click(function(){
         angular.element(".menu").toggle();
